@@ -1,7 +1,6 @@
-import React from 'react'
+import React from 'react';
+import { CardContainer } from '../features';
 
 export const App = () => {
-  return (
-    <div>Hello World!</div>
-  );
-}
+  return <CardContainer />;
+};
