@@ -1,1 +1,6 @@
-/* Your styles goes here. */
+.container {
+    display: flex;
+    background: green;
+    height: 100vh;
+    padding: 1rem;
+}

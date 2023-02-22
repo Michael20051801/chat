@@ -2,6 +2,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import viteTsConfigPaths from 'vite-tsconfig-paths';
+// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
+import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
   cacheDir: '../node_modules/.vite/client',
@@ -17,6 +19,7 @@ export default defineConfig({
   },
 
   plugins: [
+    svgr(),
     react(),
     viteTsConfigPaths({
       root: '../',
