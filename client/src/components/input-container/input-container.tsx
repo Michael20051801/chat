@@ -8,7 +8,7 @@ export const InputContainer :React.FC = () => {
     <div className={style.container}>
       <button className={style.sendButton} onClick={()=>console.log('sent')}>
         <PaperPlane className={style.paperPlane}/>
-        </button>
+      </button>
       <input className={style.inputField} type="text"/>
       
     </div>
