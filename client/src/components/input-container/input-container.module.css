@@ -22,6 +22,7 @@
     background-color: green;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .inputField{

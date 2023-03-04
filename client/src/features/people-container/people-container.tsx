@@ -1,17 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from './people-container.module.css';
 
-import {ReactComponent as NewChat} from '../../assets/whatsapp-new-chat.svg';
+import {ReactComponent as NewChatIcon} from '../../assets/whatsapp-new-chat.svg';
+import { NewChatModal } from 'client/src/components';
+
 
 export const PeopleContainer: React.FC = () => {
+  const [show, setShow] = useState(false)
+
+
   return (
     
       <div className={style.container}>people-container
         <div className={style.peopleContainer}></div>
         <div className={style.addPeopleDiv}>
-          <button className={style.addPeopleButton} onClick={()=>console.log('added')}>
-            <NewChat className={style.addChat}/>
+          <button 
+          className={style.addPeopleButton} 
+          onClick={()=>{
+            console.log("added")
+            setShow(true)
+          }}
+          >
+          <NewChatIcon className={style.addChat}/>
           </button>
+          <NewChatModal
+            onClose={() => setShow(false)} 
+            showProp={show}
+            title="Add new conversation"
+          >
+            
+          </NewChatModal>
         </div>
       
       </div>
