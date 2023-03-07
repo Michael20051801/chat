@@ -3,6 +3,7 @@ import style from './people-container.module.css';
 
 import {ReactComponent as NewChatIcon} from '../../assets/whatsapp-new-chat.svg';
 import { NewChatModal } from 'client/src/components';
+import { NewChatUserList } from 'client/src/components';
 
 
 export const PeopleContainer: React.FC = () => {
@@ -11,7 +12,7 @@ export const PeopleContainer: React.FC = () => {
 
   return (
     
-      <div className={style.container}>people-container
+      <div className={style.container}>
         <div className={style.peopleContainer}></div>
         <div className={style.addPeopleDiv}>
           <button 
@@ -28,7 +29,7 @@ export const PeopleContainer: React.FC = () => {
             showProp={show}
             title="Add new conversation"
           >
-            
+            <NewChatUserList/>
           </NewChatModal>
         </div>
       

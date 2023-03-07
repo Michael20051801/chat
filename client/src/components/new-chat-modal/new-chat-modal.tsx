@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import style from './new-chat-modal.module.css';
 
 interface Props {
@@ -21,6 +21,7 @@ export const NewChatModal: React.FC<Props> = ({ showProp, onClose, title, childr
                 <div className={style.modalHeader}>
                     <h4 className={style.modalTitle}>{title}</h4>
                 </div>
+                
                 <div className={style.modalBody}>
                     {children}
                 </div>
