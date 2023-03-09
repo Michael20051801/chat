@@ -57,24 +57,34 @@
     /* display: none; */
 }
 
-.modal.show {
+.modalEnterDone {
     opacity: 1;
     pointer-events: visible;
     /* display: flex; */
 }
 
+.modalExit {
+    opacity: 0;
+}
+/* unnecessary I think */
+
+
 .modalContent {
     width: 30%;
     height: 70%; 
     background-color: #fff;
-    transform: translateY(-150px);
     transition: all 0.38s ease-in-out;
-    
+    transform: translateY(-150px);
 }
 
-.modal.show .modalContent {
+.modalEnterDone .modalContent {
     transform: translateY(0);
 }
+
+.modalExit .modalContent {
+    transform: translateY(-150px);
+}
+/* unnecessary I think */
 
 
 .modalHeader, .modalFooter {
