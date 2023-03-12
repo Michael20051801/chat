@@ -37,79 +37,77 @@
     font-size: 28px;
     font-weight: bold;
 } */
-  
-
-
 
 .modal {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: all 0.38s ease-in-out;
-    pointer-events: none;
-    /* display: none; */
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
+  /* display: none; */
 }
 
 .modalEnterDone {
-    opacity: 1;
-    pointer-events: visible;
-    /* display: flex; */
+  opacity: 1;
+  pointer-events: visible;
+  /* display: flex; */
 }
 
 .modalExit {
-    opacity: 0;
+  opacity: 0;
 }
 /* unnecessary I think */
 
-
 .modalContent {
-    width: 30%;
-    height: 70%; 
-    background-color: #fff;
-    transition: all 0.38s ease-in-out;
-    transform: translateY(-150px);
+  width: 30%;
+  height: 70%;
+  background-color: #fff;
+  transition: all 0.6s ease-in-out;
+  transform: translateY(-150px);
 }
 
 .modalEnterDone .modalContent {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 .modalExit .modalContent {
-    transform: translateY(-150px);
+  transition: all 1s ease-in-out;
+  transform: translateY(-300px);
 }
 /* unnecessary I think */
 
-
-.modalHeader, .modalFooter {
-    padding: 10px;
-    height: 15%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.modalHeader,
+.modalFooter {
+  padding: 10px;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modalTitle {
-    margin: 0;
+  margin: 0;
 }
 
 .modalBody {
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    height: 70%;
-    display: flex;
-    justify-content: flex-start;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  height: 70%;
+  display: flex;
+  /* justify-content: flex-start; */
+  justify-content: center;
 }
 
 .closeButton:hover,
 .closeButton:focus {
-    color: grey;
-    text-decoration: none;
-    cursor: pointer;
-}   
+  color: grey;
+  text-decoration: none;
+  cursor: pointer;
+}

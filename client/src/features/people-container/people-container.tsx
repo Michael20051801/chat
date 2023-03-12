@@ -16,14 +16,15 @@ export const PeopleContainer: React.FC = () => {
       <div className={style.peopleContainer}>
         {/* This is the list where the clicked users will show */}
         {usersList.map((user) => (
-          <NewChatUser name={user.name} status={user.status} />
+          <div className={style.userChat}>
+            <NewChatUser name={user.name} status={user.status} />
+          </div>
         ))}
       </div>
       <div className={style.addPeopleDiv}>
         <button
           className={style.addPeopleButton}
           onClick={() => {
-            console.log('added');
             setShow(true);
           }}
         >
@@ -34,7 +35,7 @@ export const PeopleContainer: React.FC = () => {
           showProp={show}
           title="Add new conversation"
         >
-          <NewChatUserList />
+          <NewChatUserList onClose={() => setShow(false)} />
         </NewChatModal>
       </div>
     </div>

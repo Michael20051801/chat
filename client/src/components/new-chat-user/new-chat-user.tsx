@@ -6,16 +6,15 @@ import { ReactComponent as ProfilePic } from '../../assets/default-user.svg';
 interface Props {
   status: string;
   name: string;
-  openChat?: () => void;
 }
 
-export const NewChatUser: React.FC<Props> = ({
-  status,
-  name,
-  openChat,
-}: Props) => {
+export const NewChatUser: React.FC<Props> = ({ status, name }: Props) => {
+  // const handleClick = () => {
+  //   return openChat;
+  // }
+
   return (
-    <div className={style.container} onClick={openChat}>
+    <div className={style.container}>
       <div className={style.profilePicButton}>
         <ProfilePic className={style.profilePic} />
       </div>

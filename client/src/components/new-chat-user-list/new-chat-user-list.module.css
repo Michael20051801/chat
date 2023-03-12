@@ -2,14 +2,19 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
     overflow: auto;
     width: 100%;
-    border: none;
-    
+    border: none; 
 }
 
-.container > div {
+.empty {
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.user {
     display: flex;
     justify-content: center;
     width: 50%;

@@ -2,6 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { User } from 'client/src/types';
 
 const initialState: User[] = [{ name: 'מיכאל', status: 'אני עושה פרויקט' }];
+// const initialState: User[] = [];
 
 const usersSlice = createSlice({
   name: 'usersSlice',
