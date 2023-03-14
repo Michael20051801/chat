@@ -1,7 +1,10 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { User } from 'client/src/types';
 
-const initialState: User[] = [{ name: 'מיכאל', status: 'אני עושה פרויקט' }];
+const initialState: User[] = [
+  { name: 'Michael', status: `I'm doing a project` },
+  { name: 'Daniel', status: 'At the beach' },
+];
 // const initialState: User[] = [];
 
 const usersSlice = createSlice({
@@ -9,6 +12,9 @@ const usersSlice = createSlice({
   initialState: initialState,
   reducers: {
     addUser: (state, action: PayloadAction<User>) => {
+      // state.map((user) => (
+
+      // ))
       state.push(action.payload);
     },
   },

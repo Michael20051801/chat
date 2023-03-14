@@ -37,6 +37,12 @@
     width: 100%;
     text-align: left;
     padding: 1rem;
+    font-size: large;
+}
+
+input::placeholder {
+    color: rgb(182, 182, 182);
+    font-size: small;
 }
 
 .paperPlane{

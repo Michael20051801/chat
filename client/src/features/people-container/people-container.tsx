@@ -15,9 +15,9 @@ export const PeopleContainer: React.FC = () => {
     <div className={style.container}>
       <div className={style.peopleContainer}>
         {/* This is the list where the clicked users will show */}
-        {usersList.map((user) => (
+        {usersList.map((user, index) => ( 
           <div className={style.userChat}>
-            <NewChatUser name={user.name} status={user.status} />
+            <NewChatUser name={user.user.name} status={user.user.status} />
           </div>
         ))}
       </div>

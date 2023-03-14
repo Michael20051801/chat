@@ -13,4 +13,11 @@
     height: 3%;
     float: right;
     margin-top: 50px;
+    display: flex;
+}
+
+.msgCloud > span{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
 }

@@ -38,7 +38,9 @@ export const NewChatModal: React.FC<Props> = ({
             <h4 className={style.modalTitle}>{title}</h4>
           </div>
 
-          <div className={style.modalBody}>{children}</div>
+          <div className={style.modalBody}>
+            {children}
+          </div>
 
           <div className={style.modalFooter}>
             <button className={style.closeButton} onClick={onClose}>

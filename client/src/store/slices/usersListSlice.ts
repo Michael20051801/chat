@@ -1,13 +1,13 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { User } from 'client/src/types';
+import { User, UserWithKey } from 'client/src/types';
 
-const initialState: User[] = [];
+const initialState: UserWithKey[] = [];
 
 const usersListSlice = createSlice({
   name: 'usersListSlice',
   initialState: initialState,
   reducers: {
-    addUserToList: (state, action: PayloadAction<User>) => {
+    addUserToList: (state, action: PayloadAction<UserWithKey>) => {
       state.push(action.payload);
     },
   },
