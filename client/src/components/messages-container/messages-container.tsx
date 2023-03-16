@@ -1,10 +1,10 @@
 import { RootState } from 'client/src/store';
-import React from 'react'
+import React from 'react';
 import { useSelector } from 'react-redux';
 import style from './messages-container.module.css';
 
 interface Props {
-  message?: string
+  message?: string;
 }
 
 export const MessagesContainer :React.FC<Props> = ({message}: Props) => {
@@ -12,8 +12,11 @@ export const MessagesContainer :React.FC<Props> = ({message}: Props) => {
 
     return (
       <div className={style.container}>
-        <div className={style.msgCloud}>
-          <span>{messageList[messageList.length - 1]}</span>
+        <div className={`${style.msgCloud}`}>
+          <div className={style.actualMsg}>{messageList[messageList.length - 1]}</div>
+        </div>
+        <div className={`${style.msgCloud} ${style.left}`}>
+          <div className={style.actualMsg}>{messageList[messageList.length - 1]}</div>
         </div>
       </div>
     )

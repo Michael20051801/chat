@@ -20,16 +20,23 @@ export const InputContainer: React.FC = () => {
 
   const handleClick = () => {
     // alert(value)
-    // if (value != "") {
+    if (value != "") {
       dispatch(saveMessage(value))
       setValue("")
-    // }
+    }
   }
 
   const handleChange = (event:ChangeEvent) => {
     const target = event.target as HTMLInputElement;
     const newValue = target.value
     setValue(newValue)
+  }
+
+  const handleKeyDown = (event:KeyboardEvent) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      handleClick();
+    }
   }
 
   return (
@@ -40,6 +47,7 @@ export const InputContainer: React.FC = () => {
         placeholder={"Write something..."} 
         value={value}
         onChange={handleChange}
+        onKeyDown={handleKeyDown}
       />
       <button
         className={style.sendButton}
